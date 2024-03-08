@@ -16,11 +16,7 @@ const Card = () => {
                 Kisah yang dibuat sesuai dengan seleramu
               </p>
               <div className="flex justify-end items-end mt-10">
-                <img
-                  src="/src/assets/creative.svg"
-                  alt="creative"
-                  width={100}
-                />
+                <img src="/assets/creative.svg" alt="creative" width={100} />
               </div>
             </div>
           </div>
@@ -30,7 +26,7 @@ const Card = () => {
                 Berhenti atau ganti paket kapanpun anda mau
               </p>
               <div className="flex justify-end items-end mt-10">
-                <img src="/src/assets/pay.svg" alt="pay" width={100} />
+                <img src="/assets/pay.svg" alt="pay" width={100} />
               </div>
             </div>
           </div>
@@ -40,7 +36,7 @@ const Card = () => {
                 Fitur khusus anak tanpa takut dengan film 18+
               </p>
               <div className="flex justify-end items-end mt-10">
-                <img src="/src/assets/child.svg" alt="child" width={100} />
+                <img src="/assets/child.svg" alt="child" width={100} />
               </div>
             </div>
           </div>
@@ -50,7 +46,7 @@ const Card = () => {
                 Kapanpun dan dimanapun untuk menonton
               </p>
               <div className="flex justify-end items-end mt-10">
-                <img src="/src/assets/every.svg" alt="every" width={100} />
+                <img src="/assets/every.svg" alt="every" width={100} />
               </div>
             </div>
           </div>

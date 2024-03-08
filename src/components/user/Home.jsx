@@ -7,7 +7,7 @@ const Home = () => {
       <div className="absolute inset-0 overflow-hidden">
         <img
           className="w-full h-full object-cover filter brightness-75"
-          src="/src/assets/bg.jpg"
+          src="/assets/bg.jpg"
           alt="Background"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black"></div>

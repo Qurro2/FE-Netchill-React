@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root{
+  background-color: transparent;
+  color: black;
+}
+
+
+.linked:hover svg{
+  fill : rgb(0, 0, 255)
+}
+
+.github:hover svg{
+  fill: grey
+}
+
+.instagram:hover svg{
+  fill: red
+}

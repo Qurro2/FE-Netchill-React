@@ -83,40 +83,20 @@ const Movielist = () => {
             Top Picks for <span className="text-red-600">Nana Gajah</span>
           </p>
           <div className="carousel rounded-box gap-3 relative mt-3">
-            {moviesTop.map((item, index) => (
-              <div className="carousel-item relative" key={index}>
-                <a href="">
-                  <div
-                    className={`bg-red-500 rounded-xl z-10 absolute bottom-0 left-1/2 transform -translate-x-1/2 text-white w-32 text-center
-                    )}`}
-                  >
-                    <p>{getBadge()}</p>
-                  </div>
-
-                  <img
-                    className="z-0"
-                    src={`${import.meta.env.VITE_IMG_URL}/${item.poster_path}`}
-                    alt={item.title}
-                    width={220}
-                  />
-                </a>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-5">
-            <p className="text-xl md:text-2xl text-start">
-              Family Watch Together
-            </p>
-            <div className="carousel rounded-box gap-3 relative mt-3">
-              {moviesTogether.map((item, index) => (
+            {moviesTop &&
+              moviesTop.length > 0 &&
+              moviesTop.map((item, index) => (
                 <div className="carousel-item relative" key={index}>
                   <a href="">
-                    <div className="bg-red-500 rounded-xl z-10 absolute bottom-0 left-1/2 transform -translate-x-1/2 text-white w-32 text-center">
-                      <p>{item.popularity}</p>
+                    <div
+                      className={`bg-red-500 rounded-xl z-10 absolute bottom-0 left-1/2 transform -translate-x-1/2 text-white w-32 text-center
+                    )}`}
+                    >
+                      <p>{getBadge()}</p>
                     </div>
+
                     <img
-                      className=" z-0 "
+                      className="z-0"
                       src={`${import.meta.env.VITE_IMG_URL}/${
                         item.poster_path
                       }`}
@@ -126,6 +106,32 @@ const Movielist = () => {
                   </a>
                 </div>
               ))}
+          </div>
+
+          <div className="mt-5">
+            <p className="text-xl md:text-2xl text-start">
+              Family Watch Together
+            </p>
+            <div className="carousel rounded-box gap-3 relative mt-3">
+              {moviesTogether &&
+                moviesTogether.length > 0 &&
+                moviesTogether.map((item, index) => (
+                  <div className="carousel-item relative" key={index}>
+                    <a href="">
+                      <div className="bg-red-500 rounded-xl z-10 absolute bottom-0 left-1/2 transform -translate-x-1/2 text-white w-32 text-center">
+                        <p>{item.popularity}</p>
+                      </div>
+                      <img
+                        className=" z-0 "
+                        src={`${import.meta.env.VITE_IMG_URL}/${
+                          item.poster_path
+                        }`}
+                        alt={item.title}
+                        width={220}
+                      />
+                    </a>
+                  </div>
+                ))}
             </div>
           </div>
 
@@ -135,28 +141,30 @@ const Movielist = () => {
               <span className="text-red-600">Nana Gajah</span>
             </p>
             <div className="carousel rounded-box gap-3 relative mt-3">
-              {moviesContinue.map((item, index) => (
-                <div className="carousel-item relative" key={index}>
-                  <a href="">
-                    <div className="bg-red-500 rounded-xl z-10 absolute bottom-3 left-1/2 transform -translate-x-1/2 text-white w-32 text-center text-sm">
-                      <p>{getRandomTime()}</p>
-                    </div>
-                    <img
-                      className="z-0"
-                      src={`${import.meta.env.VITE_IMG_URL}/${
-                        item.poster_path
-                      }`}
-                      alt={item.title}
-                      width={220}
-                    />
-                    <progress
-                      className="progress progress-error absolute bottom-0 left-0 w-full"
-                      value={getRandomValue()}
-                      max="100"
-                    ></progress>
-                  </a>
-                </div>
-              ))}
+              {moviesContinue &&
+                moviesContinue.length > 0 &&
+                moviesContinue.map((item, index) => (
+                  <div className="carousel-item relative" key={index}>
+                    <a href="">
+                      <div className="bg-red-500 rounded-xl z-10 absolute bottom-3 left-1/2 transform -translate-x-1/2 text-white w-32 text-center text-sm">
+                        <p>{getRandomTime()}</p>
+                      </div>
+                      <img
+                        className="z-0"
+                        src={`${import.meta.env.VITE_IMG_URL}/${
+                          item.poster_path
+                        }`}
+                        alt={item.title}
+                        width={220}
+                      />
+                      <progress
+                        className="progress progress-error absolute bottom-0 left-0 w-full"
+                        value={getRandomValue()}
+                        max="100"
+                      ></progress>
+                    </a>
+                  </div>
+                ))}
             </div>
           </div>
         </div>

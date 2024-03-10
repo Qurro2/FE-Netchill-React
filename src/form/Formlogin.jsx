@@ -1,6 +1,8 @@
 import React from "react";
 import NavbarNologin from "../components/navigation/NavbarNologin";
 import Footer from "../components/navigation/Footer";
+import { Link } from "react-router-dom";
+import Selectuser from "../pages/Selectuser";
 
 const Formlogin = () => {
   return (
@@ -36,12 +38,12 @@ const Formlogin = () => {
                 placeholder="Enter your password"
               />
             </div>
-            <button
-              type="submit"
-              className="w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 focus:outline-none focus:bg-red-700"
-            >
-              Masuk
-            </button>
+            <Link to="/user">
+              <button className="w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 focus:outline-none focus:bg-red-700">
+                Masuk
+              </button>
+            </Link>
+
             <div className="form-control w-24 mt-3">
               <label className="cursor-pointer label">
                 <input
@@ -58,6 +60,12 @@ const Formlogin = () => {
             <a href="#" className="text-red-600 hover:underline ml-1">
               Daftar
             </a>
+          </p>
+
+          <p className="text-center text-white">
+            {" "}
+            langsung klik/pencet masuk <br />
+            gk ada backend karna vps mahal
           </p>
         </div>
       </div>
